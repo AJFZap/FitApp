@@ -1,0 +1,74 @@
+<BridgesContentThree>:
+    name: 'Angled Bridges'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('bridges')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Sit on the edge of the bunk or bed, and lie back with your feet flat on the ground. They should be approximately shoulder width apart. Shuffle forwards a little so that your hips are off the bunk, and place your hands either side of your head, with your fingers pointing towards your feet. This is the start position (fig.87). Press down through the hands, straightening the elbows and pushing the hips up, arching your back as you do so. Continue smoothly pushing as far as you can, at least until your head and body are entirely clear of the bunk. The arms don't need to be fully extended; the elbows will be bent. You may only lift up a few inches. That's fine. Allow your head to tilt back under control, so that you can see the wall behind you. This is the finish position (fig.88). Reverse the motion, lowering yourself until your torso and head are resting completely on the bunk again. Repeat as necessary, breathing normally."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 8\n• intermediate standard:  2 sets of 15\n• Progression standard:  3 sets of 30"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/bridgeimags/bridge 3 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/bridgeimags/bridge 3 fig 2.png"
+

@@ -1,0 +1,27 @@
+<SplashScreen>:
+    name: "SplashScreen"
+
+    MDScreen:
+
+        FloatLayout:
+            Image:
+                source: "images/splashscreen/splashscreengif.zip"
+                fit_mode: "fill"
+                anim_delay: 0.2
+                anim_reset: True
+            
+            MDLabel:
+                size: self.texture_size
+                pos_hint: {'center_x': .5, 'center_y': 0.7}
+                halign: 'center'
+                font_name: "fonts/EUROSTIB.ttf"
+                font_size: '22sp'
+                outline_width: 5
+                outline_colour: (0, 0, 0, 1)
+                text: "Fit App version 0.7.3\nALPHA preview"
+
+            MDSpinner:
+                size_hint: None, None
+                size: dp(64), dp(64)
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                active: True

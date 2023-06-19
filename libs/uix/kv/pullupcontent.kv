@@ -1,0 +1,77 @@
+<PullUpContent>:
+    name: 'Pull Ups'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('pullups')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "What is a pullup?"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "The pullup is the oldest muscle-building exercise in existence. Evidence of pullups in ancient history are easy to find; several classical writers described the technique, which was popular with warriors, athletes, and even civilians who wanted to retain excellent levels of strength. Despite this, it's impossible to date the origin of the exercise, because in a sense it undoubtedly predates the human species. Evolutionary scientists tell us that prior to evolving into Homo sapiens, our distant ancestors were almost definitely tree-dwellers, just as chimpanzees and many other great apes still are. For the forerunners of humanity, pulling yourself up into the branches of a tree would have been as natural an event as taking a step is for us today. The fact that humans were practically born to do this exercise means that it's the safestback exercise in existence, because the movement works with your natural biomechanics, notagainst them. This is an important point, because (due to dangerous exercises) back trainingcauses more injuries than any other type of training in the gym. Most of these injuries are sufferedby the lower back, but lower back injuries caused by pullups are unheard of. The reason why is simple-because the legs are hanging during pullups, there is no external pressure on the spinal column. The lower and upper back retain their natural curves, locked into place by the spinal erector muscles which run up either side of the spine."
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Benefits"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "The largest muscles of the human torso are the latissimus dorsi (often known as the 'lats') which run from the armpits down beyond the ribs, and which span out around the back like opening fans. Most of the other back muscles are worked by pullups, such as the trapezius, rear deltoids and the teres and rhomboids around the shoulder blades, but the lats definitely get the lion's share of the work. Not only are these muscles big, they are also astonishingly responsive-it's as though the muscle cells of the lats are genetically preprogrammed to get big and strong when stimulated. Take a look at a modern bodybuilder posing, and the most impressive muscles are not the arms or legs but the lats; a lot of these guys have lats that practically look like wings. Even hard-gaining bodybuilders who find it incredibly difficult to add beef to their chests discover that as soon as they start training their lats properly, they become bigger almost overnight. It's as if these muscles are major tools utilized by our forefathers, lying dormant yet faithfully waiting to explode into growth when called upon. Without doubt, pull ups will give you bigger muscles quicker than any other torso exercise in existence. But this is really only a pleasant side benefit of the real gift of pullups, which is functional strength. That vital attribute of true strength, the grip, also gets a hell of a whipping from pull ups holding onto that bar as you move your bodyweight up and down will give you fingers and palms much stronger than the average guy, even if you do no specific grip traming. The flexor muscles on the forearm also benefit and become more powerful. Believe it or not, pullups even give the abs and hips-which, in daily life, are not used to holding both legs off the ground-a great isometric workout. Beginners who attempt the exercise often have stomachs that are sorer than their la ts the next day."
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "The shoulders are ball-and-socket joints. This kind of joint is incredibly versatile in terms of motion, but that versatility comes at a price-increased vulnerability. If you relax your shoulders while you are hanging from an overhead bar, the ball joint becomes stretched in the socket, and is only held in place by inflexible ligaments. This practice not only causes the ligaments irritation under great force, it can also result in partial or complete shoulder dislocation in some cases. This is rare, but it does happen, particularly where there is pre-existing injury. Keeping tight shoulders cradles the joint in a dense network of muscles, protecting the internal ligaments and making dislocation virtually impossible."
+
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/pullimags/basics pullup.png"
+

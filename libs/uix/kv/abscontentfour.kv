@@ -1,0 +1,81 @@
+<AbsContentFour>:
+    name: 'Flat Frog Raises'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('abs')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts//Eurostile.ttf"
+                    text: "Perform the positive portion of Step 3, the bent leg raise, but instead of pausing at the top (fig.66), straighten your legs out fully. They should be perfectly straight, and perpendicular to the floor, so that your legs and torso form a right angle. This is the finish position (fig. 67). You should exhale throughout this two-part motion. In most midsection work you would now reverse the movement; but not so here. Your muscles are stronger when lowering under resistance (because gravity helps), and frog raise techniques take advantage of this fact. Lower your legs, keeping them perfectly straight (fig. 68) until they are an inch or two off the floor (fig. 69). In most exercises you should take about two seconds to go up and two seconds to go down. But for this exercise count four seconds down, to allow your body more work in the stronger position. Inhale as your legs slowly descend. Repeat."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 8\n• intermediate standard:  2 sets of 15\n• Progression standard:  3 sets of 25"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 4 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 4 fig 2.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 4 fig 3.png"
+

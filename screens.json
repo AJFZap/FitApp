@@ -1,0 +1,377 @@
+{
+    "SplashScreen": {
+        "import": "from libs.uix.baseclass.splashscreen import SplashScreen",
+        "object": "SplashScreen()",
+        "kv": "libs/uix/kv/splashscreen.kv"
+    },
+    "Routines": {
+        "import": "from libs.uix.baseclass.routines import Routine",
+        "object": "Routine()",
+        "kv": "libs/uix/kv/routines.kv"
+    },
+    "main": {
+        "import": "from libs.uix.baseclass.exercises import Main",
+        "object": "Main()",
+        "kv": "libs/uix/kv/navbar.kv"
+    },
+    "pushup": {
+        "import": "from libs.uix.baseclass.pushupcard import PushUp",
+        "object": "PushUp()",
+        "kv": "libs/uix/kv/pushupcard.kv"
+    },
+    "abs": {
+        "import": "from libs.uix.baseclass.abscard import Abs",
+        "object": "Abs()",
+        "kv": "libs/uix/kv/abscard.kv"
+    },
+    "squats": {
+        "import": "from libs.uix.baseclass.squatscard import Squats",
+        "object": "Squats()",
+        "kv": "libs/uix/kv/squatscard.kv"
+    },
+    "bridges": {
+        "import": "from libs.uix.baseclass.bridgescard import Bridges",
+        "object": "Bridges()",
+        "kv": "libs/uix/kv/bridgescard.kv"
+    },
+    "handstand": {
+        "import": "from libs.uix.baseclass.handstandcard import HandStand",
+        "object": "HandStand()",
+        "kv": "libs/uix/kv/handstandcard.kv"
+    },
+    "pullups": {
+        "import": "from libs.uix.baseclass.pullupcard import PullUp",
+        "object": "PullUp()",
+        "kv": "libs/uix/kv/pullupcard.kv"
+    },
+    "Leg Raises": {
+        "import": "from libs.uix.baseclass.abscontent import AbsContent",
+        "object": "AbsContent()",
+        "kv": "libs/uix/kv/abscontent.kv"
+    },
+    "Knee Tucks": {
+        "import": "from libs.uix.baseclass.abscontentone import AbsContentOne",
+        "object": "AbsContentOne()",
+        "kv": "libs/uix/kv/abscontentone.kv"
+    },
+    "Flat Knee Raises": {
+        "import": "from libs.uix.baseclass.abscontenttwo import AbsContentTwo",
+        "object": "AbsContentTwo()",
+        "kv": "libs/uix/kv/abscontenttwo.kv"
+    },
+    "Flat Bent Leg Raises": {
+        "import": "from libs.uix.baseclass.abscontentthree import AbsContentThree",
+        "object": "AbsContentThree()",
+        "kv": "libs/uix/kv/abscontentthree.kv"
+    },
+    "Flat Frog Raises": {
+        "import": "from libs.uix.baseclass.abscontentfour import AbsContentFour",
+        "object": "AbsContentFour()",
+        "kv": "libs/uix/kv/abscontentfour.kv"
+    },
+    "Flat Straight Leg Raises": {
+        "import": "from libs.uix.baseclass.abscontentfive import AbsContentFive",
+        "object": "AbsContentFive()",
+        "kv": "libs/uix/kv/abscontentfive.kv"
+    },
+    "Hanging Knee Raises": {
+        "import": "from libs.uix.baseclass.abscontentsix import AbsContentSix",
+        "object": "AbsContentSix()",
+        "kv": "libs/uix/kv/abscontentsix.kv"
+    },
+    "Hanging Bent Leg Raises": {
+        "import": "from libs.uix.baseclass.abscontentseven import AbsContentSeven",
+        "object": "AbsContentSeven()",
+        "kv": "libs/uix/kv/abscontentseven.kv"
+    },
+    "Hanging Frog Raises": {
+        "import": "from libs.uix.baseclass.abscontenteight import AbsContentEight",
+        "object": "AbsContentEight()",
+        "kv": "libs/uix/kv/abscontenteight.kv"
+    },
+    "Partial Straight Leg Raises": {
+        "import": "from libs.uix.baseclass.abscontentnine import AbsContentNine",
+        "object": "AbsContentNine()",
+        "kv": "libs/uix/kv/abscontentnine.kv"
+    },
+    "Hanging Straight Leg Raises": {
+        "import": "from libs.uix.baseclass.abscontentten import AbsContentTen",
+        "object": "AbsContentTen()",
+        "kv": "libs/uix/kv/abscontentten.kv"
+    },
+    "Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontent import PushUpContent",
+        "object": "PushUpContent()",
+        "kv": "libs/uix/kv/pushupcontent.kv"
+    },
+    "Wall Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontentone import PushUpContentOne",
+        "object": "PushUpContentOne()",
+        "kv": "libs/uix/kv/pushupcontentone.kv"
+    },
+    "Incline Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontenttwo import PushUpContentTwo",
+        "object": "PushUpContentTwo()",
+        "kv": "libs/uix/kv/pushupcontenttwo.kv"
+    },
+    "Kneeling Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontentthree import PushUpContentThree",
+        "object": "PushUpContentThree()",
+        "kv": "libs/uix/kv/pushupcontentthree.kv"
+    },
+    "Half Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontentfour import PushUpContentFour",
+        "object": "PushUpContentFour()",
+        "kv": "libs/uix/kv/pushupcontentfour.kv"
+    },
+    "Full Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontentfive import PushUpContentFive",
+        "object": "PushUpContentFive()",
+        "kv": "libs/uix/kv/pushupcontentfive.kv"
+    },
+    "Close Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontentsix import PushUpContentSix",
+        "object": "PushUpContentSix()",
+        "kv": "libs/uix/kv/pushupcontentsix.kv"
+    },
+    "Uneven Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontentseven import PushUpContentSeven",
+        "object": "PushUpContentSeven()",
+        "kv": "libs/uix/kv/pushupcontentseven.kv"
+    },
+    "Half One-Arm Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontenteight import PushUpContentEight",
+        "object": "PushUpContentEight()",
+        "kv": "libs/uix/kv/pushupcontenteight.kv"
+    },
+    "Lever Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontentnine import PushUpContentNine",
+        "object": "PushUpContentNine()",
+        "kv": "libs/uix/kv/pushupcontentnine.kv"
+    },
+    "One-Arm Pushups": {
+        "import": "from libs.uix.baseclass.pushupcontentten import PushUpContentTen",
+        "object": "PushUpContentTen()",
+        "kv": "libs/uix/kv/pushupcontentten.kv"
+    },
+    "Squats": {
+        "import": "from libs.uix.baseclass.squatscontent import SquatsContent",
+        "object": "SquatsContent()",
+        "kv": "libs/uix/kv/squatscontent.kv"
+    },
+    "Shoulderstand Squats": {
+        "import": "from libs.uix.baseclass.squatscontentone import SquatsContentOne",
+        "object": "SquatsContentOne()",
+        "kv": "libs/uix/kv/squatscontentone.kv"
+    },
+    "Jackknife Squats": {
+        "import": "from libs.uix.baseclass.squatscontenttwo import SquatsContentTwo",
+        "object": "SquatsContentTwo()",
+        "kv": "libs/uix/kv/squatscontenttwo.kv"
+    },
+    "Supported Squats": {
+        "import": "from libs.uix.baseclass.squatscontentthree import SquatsContentThree",
+        "object": "SquatsContentThree()",
+        "kv": "libs/uix/kv/squatscontentthree.kv"
+    },
+    "Half Squats": {
+        "import": "from libs.uix.baseclass.squatscontentfour import SquatsContentFour",
+        "object": "SquatsContentFour()",
+        "kv": "libs/uix/kv/squatscontentfour.kv"
+    },
+    "Full Squats": {
+        "import": "from libs.uix.baseclass.squatscontentfive import SquatsContentFive",
+        "object": "SquatsContentFive()",
+        "kv": "libs/uix/kv/squatscontentfive.kv"
+    },
+    "Close Squats": {
+        "import": "from libs.uix.baseclass.squatscontentsix import SquatsContentSix",
+        "object": "SquatsContentSix()",
+        "kv": "libs/uix/kv/squatscontentsix.kv"
+    },
+    "Uneven Squats": {
+        "import": "from libs.uix.baseclass.squatscontentseven import SquatsContentSeven",
+        "object": "SquatsContentSeven()",
+        "kv": "libs/uix/kv/squatscontentseven.kv"
+    },
+    "Half One-Leg Squats": {
+        "import": "from libs.uix.baseclass.squatscontenteight import SquatsContentEight",
+        "object": "SquatsContentEight()",
+        "kv": "libs/uix/kv/squatscontenteight.kv"
+    },
+    "Assisted One-Leg Squats": {
+        "import": "from libs.uix.baseclass.squatscontentnine import SquatsContentNine",
+        "object": "SquatsContentNine()",
+        "kv": "libs/uix/kv/squatscontentnine.kv"
+    },
+    "One-Leg Squats": {
+        "import": "from libs.uix.baseclass.squatscontentten import SquatsContentTen",
+        "object": "SquatsContentTen()",
+        "kv": "libs/uix/kv/squatscontentten.kv"
+    },
+    "Pull Ups": {
+        "import": "from libs.uix.baseclass.pullupcontent import PullUpContent",
+        "object": "PullUpContent()",
+        "kv": "libs/uix/kv/pullupcontent.kv"
+    },
+    "Vertical Pulls": {
+        "import": "from libs.uix.baseclass.pullupcontentone import PullUpContentOne",
+        "object": "PullUpContentOne()",
+        "kv": "libs/uix/kv/pullupcontentone.kv"
+    },
+    "Horizontal Pulls": {
+        "import": "from libs.uix.baseclass.pullupcontenttwo import PullUpContentTwo",
+        "object": "PullUpContentTwo()",
+        "kv": "libs/uix/kv/pullupcontenttwo.kv"
+    },
+    "Jackknife Pulls": {
+        "import": "from libs.uix.baseclass.pullupcontentthree import PullUpContentThree",
+        "object": "PullUpContentThree()",
+        "kv": "libs/uix/kv/pullupcontentthree.kv"
+    },
+    "Half Pullups": {
+        "import": "from libs.uix.baseclass.pullupcontentfour import PullUpContentFour",
+        "object": "PullUpContentFour()",
+        "kv": "libs/uix/kv/pullupcontentfour.kv"
+    },
+    "Full Pullups": {
+        "import": "from libs.uix.baseclass.pullupcontentfive import PullUpContentFive",
+        "object": "PullUpContentFive()",
+        "kv": "libs/uix/kv/pullupcontentfive.kv"
+    },
+    "Close Pullups": {
+        "import": "from libs.uix.baseclass.pullupcontentsix import PullUpContentSix",
+        "object": "PullUpContentSix()",
+        "kv": "libs/uix/kv/pullupcontentsix.kv"
+    },
+    "Uneven Pullups": {
+        "import": "from libs.uix.baseclass.pullupcontentseven import PullUpContentSeven",
+        "object": "PullUpContentSeven()",
+        "kv": "libs/uix/kv/pullupcontentseven.kv"
+    },
+    "Half One-Arm Pullups": {
+        "import": "from libs.uix.baseclass.pullupcontenteight import PullUpContentEight",
+        "object": "PullUpContentEight()",
+        "kv": "libs/uix/kv/pullupcontenteight.kv"
+    },
+    "Assisted One-Arm Pullups": {
+        "import": "from libs.uix.baseclass.pullupcontentnine import PullUpContentNine",
+        "object": "PullUpContentNine()",
+        "kv": "libs/uix/kv/pullupcontentnine.kv"
+    },
+    "One-Arm Pullups": {
+        "import": "from libs.uix.baseclass.pullupcontentten import PullUpContentTen",
+        "object": "PullUpContentTen()",
+        "kv": "libs/uix/kv/pullupcontentten.kv"
+    },
+    "Bridges": {
+        "import": "from libs.uix.baseclass.bridgescontent import BridgesContent",
+        "object": "BridgesContent()",
+        "kv": "libs/uix/kv/bridgescontent.kv"
+    },
+    "Short Bridges": {
+        "import": "from libs.uix.baseclass.bridgescontentone import BridgesContentOne",
+        "object": "BridgesContentOne()",
+        "kv": "libs/uix/kv/bridgescontentone.kv"
+    },
+    "Straight Bridges": {
+        "import": "from libs.uix.baseclass.bridgescontenttwo import BridgesContentTwo",
+        "object": "BridgesContentTwo()",
+        "kv": "libs/uix/kv/bridgescontenttwo.kv"
+    },
+    "Angled Bridges": {
+        "import": "from libs.uix.baseclass.bridgescontentthree import BridgesContentThree",
+        "object": "BridgesContentThree()",
+        "kv": "libs/uix/kv/bridgescontentthree.kv"
+    },
+    "Head Bridges": {
+        "import": "from libs.uix.baseclass.bridgescontentfour import BridgesContentFour",
+        "object": "BridgesContentFour()",
+        "kv": "libs/uix/kv/bridgescontentfour.kv"
+    },
+    "Half Bridges": {
+        "import": "from libs.uix.baseclass.bridgescontentfive import BridgesContentFive",
+        "object": "BridgesContentFive()",
+        "kv": "libs/uix/kv/bridgescontentfive.kv"
+    },
+    "Full Bridges": {
+        "import": "from libs.uix.baseclass.bridgescontentsix import BridgesContentSix",
+        "object": "BridgesContentSix()",
+        "kv": "libs/uix/kv/bridgescontentsix.kv"
+    },
+    "Wall Walking Bridges 'D'": {
+        "import": "from libs.uix.baseclass.bridgescontentseven import BridgesContentSeven",
+        "object": "BridgesContentSeven()",
+        "kv": "libs/uix/kv/bridgescontentseven.kv"
+    },
+    "Wall Walking Bridges 'U'": {
+        "import": "from libs.uix.baseclass.bridgescontenteight import BridgesContentEight",
+        "object": "BridgesContentEight()",
+        "kv": "libs/uix/kv/bridgescontenteight.kv"
+    },
+    "Closing Bridges": {
+        "import": "from libs.uix.baseclass.bridgescontentnine import BridgesContentNine",
+        "object": "BridgesContentNine()",
+        "kv": "libs/uix/kv/bridgescontentnine.kv"
+    },
+    "Stand-To-Stand Bridges": {
+        "import": "from libs.uix.baseclass.bridgescontentten import BridgesContentTen",
+        "object": "BridgesContentTen()",
+        "kv": "libs/uix/kv/bridgescontentten.kv"
+    },
+    "Handstand": {
+        "import": "from libs.uix.baseclass.handstandcontent import HandStandContent",
+        "object": "HandStandContent()",
+        "kv": "libs/uix/kv/handstandcontent.kv"
+    },
+    "Wall Headstands": {
+        "import": "from libs.uix.baseclass.handstandcontentone import HandStandContentOne",
+        "object": "HandStandContentOne()",
+        "kv": "libs/uix/kv/handstandcontentone.kv"
+    },
+    "Crow Stands": {
+        "import": "from libs.uix.baseclass.handstandcontenttwo import HandStandContentTwo",
+        "object": "HandStandContentTwo()",
+        "kv": "libs/uix/kv/handstandcontenttwo.kv"
+    },
+    "Wall Handstands": {
+        "import": "from libs.uix.baseclass.handstandcontentthree import HandStandContentThree",
+        "object": "HandStandContentThree()",
+        "kv": "libs/uix/kv/handstandcontentthree.kv"
+    },
+    "Half Handstand Pushups": {
+        "import": "from libs.uix.baseclass.handstandcontentfour import HandStandContentFour",
+        "object": "HandStandContentFour()",
+        "kv": "libs/uix/kv/handstandcontentfour.kv"
+    },
+    "Handstand Pushups": {
+        "import": "from libs.uix.baseclass.handstandcontentfive import HandStandContentFive",
+        "object": "HandStandContentFive()",
+        "kv": "libs/uix/kv/handstandcontentfive.kv"
+    },
+    "Close Handstand Pushups": {
+        "import": "from libs.uix.baseclass.handstandcontentsix import HandStandContentSix",
+        "object": "HandStandContentSix()",
+        "kv": "libs/uix/kv/handstandcontentsix.kv"
+    },
+    "Uneven Handstand Pushups": {
+        "import": "from libs.uix.baseclass.handstandcontentseven import HandStandContentSeven",
+        "object": "HandStandContentSeven()",
+        "kv": "libs/uix/kv/handstandcontentseven.kv"
+    },
+    "Half One-Arm Handstand Pushups": {
+        "import": "from libs.uix.baseclass.handstandcontenteight import HandStandContentEight",
+        "object": "HandStandContentEight()",
+        "kv": "libs/uix/kv/handstandcontenteight.kv"
+    },
+    "Lever Handstand Pushups": {
+        "import": "from libs.uix.baseclass.handstandcontentnine import HandStandContentNine",
+        "object": "HandStandContentNine()",
+        "kv": "libs/uix/kv/handstandcontentnine.kv"
+    },
+    "One-Arm Handstand Pushups": {
+        "import": "from libs.uix.baseclass.handstandcontentten import HandStandContentTen",
+        "object": "HandStandContentTen()",
+        "kv": "libs/uix/kv/handstandcontentten.kv"
+    }
+}

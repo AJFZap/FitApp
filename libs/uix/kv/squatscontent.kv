@@ -1,0 +1,130 @@
+<SquatsContent>:
+    name: 'Squats'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('squats')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "What is a squat?"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Entire books have been written on how to squat. I'm a big believer that you need to squat throughout your entire athletic career-it's one of the few really invaluable exercises. For this reason, athletes need to get to know their own squatting abilities and structure over a long period of time (you are going to stay strong your whole life, right?). As a result, your individual technique will develop spontaneously."
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Different depths of motion in squatting develop different muscles. A full range of motion develops all the muscles equally. For this reason, you should aim to master full squats. Some of the steps are half-movements, but they eXist only as stages in the process towards full squats. Half-movements must always be performed in conjunction with full movements.\n• What is a full range of motion for the squat? It means squatting down until your hamstrings are pressing on your calves and you cannot descend any further, before pushing up with thigh and knee power until your legs are fully straight. Anything less is not a full squat.\n• Some people believe that going all the way down is bad for the knees. This is not true. It's only bad for the knees if you have a pre-existing knee problem-and even then, it may help alleviate that problem. Knee tendons can be strained if they are not ready for the low position, but if you carefully follow the steps through, your knees will easily be strong enough to take on the full squat. No worries!\n• Bend forwards, but don't bend too far forwards when descending. This will overemphasize the hips, and underemphasize the thighs. A frontal tilt is necessary, but don't get into the habit of bowing forwards.\n• In the bottom position, you will be virtually 'sitting' into the squat. Thinking in terms of sitting rather than squatting can sometimes help athletes descend more naturally, because it facilitates correct hip positioning-which is a fancy way of saying the butt should stick out.\n• The bottom position of the squat is the hardest portion of the motion to control. This is true for almost all exercises, but is particularly true for the squat. Despite the difficulty-particularly on one-leg squats-you must never bounce out of the squat, by dropping quickly and springing straight up. This can severely damage the cartilage in your knees, for good. Instead, slowly build up the tendon strength that's required by mastering the early steps carefully.\n• As with all The Big Six: movements, I advocate a one second pause at the bottom. This is an excellent way to eliminate dangerous bouncing.\n• A pause at the bottom is a good habit, but it's not a panacea. You can still cheat, even with a pause. To get out of the sitting position, some athletes tend to rock forwards. This provides momentum and makes the first few inches easier, but it places undesirable pressure on the knees. Stay sitting, and push up using leg power only. If you can't do this, you are too weak for the exercise you are attempting. Go back to easier steps and keep working at them."
+
+<SquatsContentOne>:
+    name: 'Shoulderstand Squats'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('squats')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Lie on your back, with your knees well bent. Kick against the floor while pushing with your hands until your feet are up in the air. As you reach this position, place your hands on your lower back for support, whilst keeping your upper arms firmly on the floor. You will now be in a shoulderstand position, supported by your shoulders and upper back, as well as the backs of your upper arms. Remember to constantly support your weight through these areas and keep any pressure off the neck. Your body should be locked straight, not bent at the hips. This is the start position (fig. 21). Keeping your torso as upright as possible, bend at the hips and knees until your knees touch your forehead. This is the finish position (fig. 22). Extend your legs directly back up, until your body is back in the start position. Repeat."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 25\n• Progression standard:  3 sets of 50"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/squatimags/squat 1 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/squatimags/squat 1 fig 2.png"
+

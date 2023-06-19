@@ -1,0 +1,74 @@
+<BridgesContentSix>:
+    name: 'Full Bridges'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('bridges')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Lie on your back. Draw your feet in, bending the knees until your heels are approximately six to eight inches from your glutes. The feet should be shoulder width apart or slightly closer. Place the hands alongside the head, with the palms flat on the floor and your fingers pointing towards your toes. Your elbows should be angled towards the ceiling at this point. This is the start position (fig.93). Now push the hips as high as you can, lifting the body from the floor. Continue pushing through your arms and legs until your back is well arched, and your hips are high. In the perfect bridge, your arms will be totally straight. Allow the head to tilt backwards between the arms, so that you can look at the wall behind you. This is the finish position (fig.94). Hold this top position for a moment, before reversing your motion. Control your descent, you will gain more benefit from the exercise if you lower yourself smoothly than if you simply collapse. Continue going all the way back down until your hips, back and head are resting completely on the floor again. This sequence constitutes one rep. Push yourself back up again for your target reps, breathing normally throughout."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 6\n• intermediate standard:  2 sets of 10\n• Progression standard:  2 sets of 15"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/bridgeimags/bridge 6 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/bridgeimags/bridge 6 fig 2.png"
+

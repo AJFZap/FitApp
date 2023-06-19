@@ -1,0 +1,74 @@
+<PushUpContentSeven>:
+    name: 'Uneven Pushups'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('pushup')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Get into the classic pushup position; feet together, legs, hips and back aligned, and arms straight with the palms on the floor beneath your upper chest. With one arm firmly supporting you, place the other hand on a basketball. Both your hands should be directly below your shoulders for stability. This is the start position (fig. 13). Once you have found your balance, do your best to evenly distribute your weight through both hands. At first this will not be easy, but persevere. Bend at the elbows and shoulders until your chest touches the top of whichever hand is on the ball (fig. 14). Pause briefly before pressing back up to the start position."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 20
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 5 (Per side)\n• intermediate standard:  2 sets of 10 (Per side)\n• Progression standard:  2 sets of 20 (Per side)"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/pushimags/pushup 7 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/pushimags/pushup 7 fig 2.png"
+

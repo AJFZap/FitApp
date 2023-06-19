@@ -1,0 +1,74 @@
+<PullUpContentSeven>:
+    name: 'Uneven Pullups'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('pullups')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Grasp the horizontal bar with one hand. A side-on or underhand grip will be more comfortable than the classic overhand version. Now take hold of the wrist of the hand which is gripping the bar, using your free hand. The thumb of the hand holding your wrist should be just below your opposite palm, with the fingers below the back of your hand. Your feet should be off the ground, knees bent, with your ankles looped behind you. Your shoulder girdle should be flexed at all times. The arm that is holding the bar should be straight except for a slight kink in the elbow. Your other arm, due to its lower position, will be bent more acutely. Your elbows will be in front of your torso. This is the start position (fig. 53). Bend at the elbows and shoulders to smoothly pull yourself up until your chin is over the bar. This is the finish position (fig. 54). Pause at the top, before slowly lowering yourself back down to the start position. Pause again before repeating."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 5 (both sides)\n• intermediate standard:  2 sets of 7 (both sides)\n• Progression standard:  2 sets of 9 (both sides)"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/pullimags/pull 7 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/pullimags/pull 7 fig 2.png"
+

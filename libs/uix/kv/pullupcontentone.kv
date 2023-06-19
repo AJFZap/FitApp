@@ -1,0 +1,74 @@
+<PullUpContentOne>:
+    name: 'Vertical Pulls'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('pullups')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Find a vertical base you can hold on to. This base should be secure and allow you to grip it safely; a doorframe or high railings are excellent potential candidates. Stand close to the base, the tips of your toes should be between three and six inches out. Take hold of the object in a comfortable grip. Ideally your hands should be shoulder width but any symmetrical position will suffice. This is the start position (fig. 41). Because of your proximity to the base, your arms will be well bent. Now allow your bodyweight to shift back by leaning slightly. Extend your arms as you go, until they are very nearly straight, and your body is angled diagonally backwards. This is the finish position (fig. 42). At this point YOll will feel a gentle stretch in your upper back, and possibly your arms. Pause momentarily before pulling yourself back to the start position, by contracting the shoulder blades and bending the arms simultaneously. Pause and repeat."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 20\n• Progression standard:  3 sets of 40"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/pullimags/pull 1 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/pullimags/pull 1 fig 2.png"
+

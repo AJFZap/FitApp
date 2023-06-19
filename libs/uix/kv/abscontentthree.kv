@@ -1,0 +1,76 @@
+<AbsContentThree>:
+    name: 'Flat Bent Leg Raises'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('abs')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Lie on your back with your legs together and stretched out on the floor. Your hands should be by your sides, and also in contact with the floor. Raise your legs, bending them at the knee approximately forty-five degrees from the straight alignment. Your feet should be kept an inch or two off the floor. This is the start position (fig. 65). The positive portion of the exercise involves raising the legs and feet smoothly--over a count of two seconds-until the feet are directly above the pelvis (fig. 66). As you move, the angle of the knee should not change; it must remain 'locked' in the same position. Pressing down on the floor with the hands will help you stabilize your torso throughout the movement. Pause at the top, before reversing the motion. Pause again in the start position before repeating as necessary. Exhale as the feet move up, inhale as they are moving down. Keep the stomach tight at all times. The feet should not touch the floor at all during the set."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 15\n• Progression standard:  3 sets of 30"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 3 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 3 fig 2.png"
+

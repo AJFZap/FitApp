@@ -1,0 +1,74 @@
+<PullUpContentThree>:
+    name: 'Jackknife Pulls'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('pullups')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "To perform this preliminary pullup exercise, you will require a high horizontal bar and a high-backed chair or similar object situated just in front of the bar. Jump up and grab hold of the bar.Your arms should be approximately shoulder width apart, in an overhand grip. When working with the bar, always keep your shoulders good and 'tight'. Don't fully relax your arms, either; keep them flexed and with a slight kink in the elbows. Now swing your legs up and rest your calves near the ankles on the back of the object you've placed in front of the bar. Arrange this object beforehand so that you'll be able to straighten your legs out. Ideally, the object should be high enough that the feet of your straight legs end up opposite your pelvis, the classic jack-knife angle. This is the start position (fig. 45). Now smoothly pull yourself up, using your straightened legs to assist you by pushing down with them. When your chin passes the bar, you are in the finish position (fig. 46). Pause before lowering yourself to the start position under full muscular control. Take care getting down when you've finished your set, and don't work to 'failure'. If your grip releases before your feet are directly below you, you risk falling and hurting yourself."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 15\n• Progression standard:  3 sets of 20"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/pullimags/pull 3 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/pullimags/pull 3 fig 2.png"
+

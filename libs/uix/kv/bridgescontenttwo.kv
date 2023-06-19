@@ -1,0 +1,74 @@
+<BridgesContentTwo>:
+    name: 'Straight Bridges'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('bridges')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Sit on the ground with your legs stretched out in front of you. Your knees should be straight, with your feet about shoulder width apart. Place your palms on the floor on either side of your hips, with your fingers pointing towards your toes. Sit up straight. Your body will now form a right angle, with your trunk perpendicular to your legs. This is the start position (fig.85). Press down through the hands, tensing the arms as you simultaneously push your hips upwards until your legs and torso form a straight line. Draw the chin up and look towards the ceiling. At this point your bodyweight will be passing through your palms and heels. This is the finish position (fig.86). Pause before reversing the motion and repeating as necessary. Exhale as you press yourself up, inhale as you go down."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 20\n• Progression standard:  3 sets of 40"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/bridgeimags/bridge 1 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/bridgeimags/bridge 1 fig 2.png"
+

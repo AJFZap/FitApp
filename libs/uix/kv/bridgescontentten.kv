@@ -1,0 +1,79 @@
+<BridgesContentTen>:
+    name: 'Stand-To-Stand Bridges'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('bridges')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Stand up straight and perform a closing bridge (Level 9) into a full bridge hold (fig.104). From this position, shift your weight forwards through the thighs, and bend the knees as you straighten your arms. Continue gradually shifting your weight forwards as your press through the hands and finally the fingers, lifting the palms off the floor. At this point, provided your back is flexible enough to maintain a high arch, and your stomach is powerful enough, your fingers will leave the ground as you start to straighten yourself up (fig.105). This upwards motion should be the consequence of a smooth forwards transfer of your bodyweight, not the result of an explosive push off the floor with the hands. Continue the movement, drawing your hands back over your shoulders and pivoting the neck up in line with the body. Finally, pull the hips in until you are standing straight with hands by your sides. This is the finish position (fig.106). Going from standing up, down to a full bridge hold, then straightening yourself back up to the standing position again constitutes one full repetition. Repeat the exercise, breathing normally."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 1\n• intermediate standard:  2 sets of 3\n• Progression standard:  2 sets of 10-30"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/bridgeimags/bridge 10 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/bridgeimags/bridge 10 fig 2.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/bridgeimags/bridge 10 fig 3.png"
+

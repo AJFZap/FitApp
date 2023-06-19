@@ -1,0 +1,1078 @@
+<Routine>:
+    name: "Routines"
+    
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            title: "Routines"
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('main')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: routines_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name:"fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "New Blood"
+
+                MDGridLayout:
+                    cols: 2
+                    padding: 20
+                    adaptive_height: True
+                    row_default_height: 35
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "MONDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pushups   2-3 work sets\nLeg raises   2-3 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "TUESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "WEDNESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "THURSDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "FRIDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pullups   2-3 work sets\nSquats   2-3 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SATURDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SUNDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+
+                MDLabel:
+                    font_size: 40
+                    halign: 'center'
+                    font_name:"fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Good Behavior"
+
+                MDGridLayout:
+                    cols: 2
+                    padding: 20
+                    adaptive_height: True
+                    row_default_height: 35
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "MONDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pushups   2 work sets\nLeg raises   2 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "TUESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "WEDNESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pullups   2 work sets\nSquats 2 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "THURSDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "FRIDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Handstand   2 work sets\nBridges   2-3 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SATURDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SUNDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                
+                MDLabel:
+                    font_size: 40
+                    halign: 'center'
+                    font_name:"fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Veterano"
+
+                MDGridLayout:
+                    cols: 2
+                    padding: 20
+                    adaptive_height: True
+                    row_default_height: 35
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "MONDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pullups   2-3 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "TUESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Bridges   2-3 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "WEDNESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Handstand   2-3 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "THURSDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Leg raises   2-3 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "FRIDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Squats   2-3 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SATURDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pushups   2-3 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SUNDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                MDLabel:
+                    font_size: 40
+                    halign: 'center'
+                    font_name:"fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Solitary Confinement"
+
+                MDGridLayout:
+                    cols: 2
+                    padding: 20
+                    adaptive_height: True
+                    row_default_height: 35
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "MONDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pullups   3-5 work sets\nSquats   3-5 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "TUESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pushups   3-5 work sets\nLeg raises   3-5 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        text: "WEDNESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Handstand   3-5 work sets\nBridges 3-5 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "THURSDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pullups   3-5 work sets\nSquats   3-5 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "FRIDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pushups   3-5 work sets\nLeg raises   3-5 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SATURDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Handstand   3-5 work sets\nBridges 3-5 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SUNDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                MDLabel:
+                    font_size: 40
+                    halign: 'center'
+                    font_name:"fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Supermax"
+
+                MDGridLayout:
+                    cols: 2
+                    padding: 20
+                    adaptive_height: True
+                    row_default_height: 35
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "MONDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pullups   10-50 work sets\nSquats   10-50 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "TUESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pushups   10-50 work sets\nLeg raises   10-50 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "WEDNESDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Handstand   10-50 work sets\nBridges 10-50 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "THURSDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pullups   10-50 work sets\nSquats   10-50 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "FRIDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Pushups   10-50 work sets\nLeg raises   10-50 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SATURDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Handstand   10-50 work sets\nBridges 10-50 work sets"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "SUNDAY:"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height
+                    
+                    MDLabel:
+                        size_hint_y: None
+                        font_size: 30
+                        valign: "middle"
+                        halign: "center"
+                        font_name:"fonts/Eurostile.ttf"
+                        text: "Off"
+                        canvas.before:
+                            Color:
+                                rgba: (1,1,1,0.7)
+                            Line:
+                                width: 1.1
+                                rectangle: self.x, self.y, self.width, self.height

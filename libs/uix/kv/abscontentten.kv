@@ -1,0 +1,76 @@
+<AbsContentTen>:
+    name: 'Hanging Straight Leg Raises'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('abs')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size:40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Take hold of an overhead bar which is high enough to leave your feet a short distance from the floor when your body is extended. Your hands should be approximately shoulder width apart. Ensure that the shoulders are tight. This is the start position (fig. 81). Smoothly-over the course of at least two seconds-raise your legs until they are parallel with the floor. Exhale as your legs rise, blowing all the air you can out of your lungs so that the abdomen is fully contracted. This is the finish position (fig. 82). Pause, before reversing the motion perfectly for at least another two seconds until you are back in the start position. Inhale as you go. Remain 'flexed', even in the start position. Your legs must stay locked at all times and you must use pure muscular control; no momentum allowed."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 5\n• intermediate standard:  2 sets of 10\n• Progression standard:  2 sets of 30"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 10 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 10 fig 2.png"
+

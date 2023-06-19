@@ -1,0 +1,74 @@
+<SquatsContentOne>:
+    name: 'Shoulderstand Squats'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('squats')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Lie on your back, with your knees well bent. Kick against the floor while pushing with your hands until your feet are up in the air. As you reach this position, place your hands on your lower back for support, whilst keeping your upper arms firmly on the floor. You will now be in a shoulderstand position, supported by your shoulders and upper back, as well as the backs of your upper arms. Remember to constantly support your weight through these areas and keep any pressure off the neck. Your body should be locked straight, not bent at the hips. This is the start position (fig. 21). Keeping your torso as upright as possible, bend at the hips and knees until your knees touch your forehead. This is the finish position (fig. 22). Extend your legs directly back up, until your body is back in the start position. Repeat."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 25\n• Progression standard:  3 sets of 50"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/squatimags/squat 1 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/squatimags/squat 1 fig 2.png"
+

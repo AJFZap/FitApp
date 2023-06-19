@@ -1,0 +1,81 @@
+<AbsContentEight>:
+    name: 'Hanging Frog Raises'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('abs')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Assume a start position identical to Level 7, hanging bent leg raises (fig. 74), and raise your legs just as you would for that same exercise. Once you reach the top position with your feet in line with your hips (fig. 75), extend your feet out in a line directly away from you, so that your legs are perfectly straight. This will put your locked legs level with the floor, and your upper and lower body at a right angle (fig. 76). Pause for a moment, but do not reverse the motion. Instead, lower your legs while keeping them locked out perfectly straight (fig. 77). Finish with your body fully extended (fig. 78) before assuming the start position again and repeating for the desired number of reps. Exhale as the legs are going up, inhale as they are going down, and keep the stomach tucked in at all times."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 5\n• intermediate standard:  2 sets of 10\n• Progression standard:  2 sets of 15"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 8 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 8 fig 2.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 400
+                    source: "images/absimags/abs 8 fig 3.png"
+

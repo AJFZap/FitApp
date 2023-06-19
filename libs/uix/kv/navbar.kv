@@ -1,0 +1,310 @@
+
+<Main>:
+    name: 'main'
+
+    MDBottomNavigation:
+        id: bottom_nav
+        selected_color_background: "purple"
+        text_color_active: "lightgrey"
+
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: 'Home'
+            icon: 'home'
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: 20
+                    spacing: 20
+                    canvas:
+                        Color:
+                            rgba: 0.5, 0.5, 0.5, 1
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                            source: "images/Sisyphus.png"
+
+                    MDLabel:
+                        text: "Welcome, champion in the making"
+                        font_name: "fonts/Eurostile.ttf"
+                        halign: 'center'
+                        font_size: root.width/10
+                        size_hint: 1, .4
+                        pos_hint:{'center_y': 0.9}
+                    
+                    MDRoundFlatButton:
+                        text: "Training Routines"
+                        font_size: '30sp'
+                        font_name: "fonts/Eurostile.ttf"
+                        size_hint: 1, .2
+                        pos_hint: {'center_x': 0.5}
+                        on_press: app.root.set_current('Routines')
+                    
+                    MDRoundFlatButton:
+                        text: "Motivation"
+                        font_size: '30sp'
+                        font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                        size_hint: 1, .2
+                        pos_hint: {'center_x': 0.5}
+                        on_press: app.MotivQuote()
+
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Training'
+            icon: 'dumbbell'
+            badge_icon: "numeric-6"
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    height: self.minimum_height
+                    canvas:
+                        Color:
+                            rgba: 0.5, 0.5, 0.5, 1
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                            source: "images/Sisyphus.png"
+
+                ScrollView:
+                    do_scroll_x: False
+                    do_scroll_y: True
+                    height: root.height
+                    width: root.width
+                    effect_cls: 'ScrollEffect'
+
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        size_hint: 1, None
+                        height: self.minimum_height
+
+                        MDLabel:
+                            text: "THE BIG SIX"
+                            font_name: "fonts/Eurostile.ttf"
+                            halign: 'center'
+                            font_size: root.width/8
+                            valign: 'top'
+                            size_hint_y: None
+                            height: 100
+
+                        MDGridLayout:
+                            cols: 2
+                            padding: 20
+                            spacing: 20
+                            size_hint: 1, None
+                            height: self.minimum_height
+                            row_default_height: 400
+                            row_force_default: True
+                            
+                            MDCard:
+                                orientation: 'vertical'
+                                style: "outlined"
+                                radius: [dp(20), dp(20), dp(20), dp(20)]
+                                canvas:
+                                    Color:
+                                        rgba: 0.5, 0.5, 0.5, 1
+                                    Rectangle:
+                                        size: self.size
+                                        pos: self.pos
+                                        source: "images/pushimags/Pushup-Card.jpg"
+
+                                MDLabel:
+                                    text: "Pushups"
+                                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    font_size: self.width/7
+                                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                    halign: 'center'
+                                
+                                MDIconButton:
+                                    icon: "play-circle-outline"
+                                    icon_size: "64sp"
+                                    theme_icon_color: "Custom"
+                                    icon_color: app.theme_cls.primary_color
+                                    pos_hint: {'center_x': 0.5}
+                                    on_press: app.ExerciseTasks("pushups")
+                                
+                            MDCard:
+                                orientation: 'vertical'
+                                canvas:
+                                    Color:
+                                        rgba: 0.5, 0.5, 0.5, 1
+                                    Rectangle:
+                                        size: self.size
+                                        pos: self.pos
+                                        source: "images/absimags/Legraise-Card.png"
+
+                                MDLabel:
+                                    text: "Abs"
+                                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    font_size: self.width/7
+                                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                    halign: 'center'
+                                
+                                MDIconButton:
+                                    icon: "play-circle-outline"
+                                    icon_size: "64sp"
+                                    theme_icon_color: "Custom"
+                                    icon_color: app.theme_cls.primary_color
+                                    pos_hint: {'center_x': 0.5}
+                                    on_press: app.ExerciseTasks("abs")
+
+                            MDCard:
+                                orientation: 'vertical'
+                                canvas:
+                                    Color:
+                                        rgba: 0.5, 0.5, 0.5, 1
+                                    Rectangle:
+                                        size: self.size
+                                        pos: self.pos
+                                        source: "images/squatimags/Squat-Card.jpg"
+
+                                MDLabel:
+                                    text: "Squats"
+                                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    font_size: self.width/7
+                                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                    halign: 'center'
+
+                                MDIconButton:
+                                    icon: "play-circle-outline"
+                                    icon_size: "64sp"
+                                    theme_icon_color: "Custom"
+                                    icon_color: app.theme_cls.primary_color
+                                    pos_hint: {'center_x': 0.5}
+                                    on_press: app.ExerciseTasks("squats")
+
+                            MDCard:
+                                orientation: 'vertical'
+                                canvas:
+                                    Color:
+                                        rgba: 0.5, 0.5, 0.5, 1
+                                    Rectangle:
+                                        size: self.size
+                                        pos: self.pos
+                                        source: "images/pullimags/Pullup-Card.png"
+
+                                MDLabel:
+                                    text: "Pullups"
+                                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    font_size: self.width/7
+                                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                    halign: 'center'
+                                
+                                MDIconButton:
+                                    icon: "play-circle-outline"
+                                    icon_size: "64sp"
+                                    theme_icon_color: "Custom"
+                                    icon_color: app.theme_cls.primary_color
+                                    pos_hint: {'center_x': 0.5}
+                                    on_press: app.ExerciseTasks("pullups")
+
+                            MDCard:
+                                orientation: 'vertical'
+                                canvas:
+                                    Color:
+                                        rgba: 0.5, 0.5, 0.5, 1
+                                    Rectangle:
+                                        size: self.size
+                                        pos: self.pos
+                                        source: "images/bridgeimags/Bridging-Card.jpg"
+
+                                MDLabel:
+                                    text: "Bridges"
+                                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    font_size: self.width/7
+                                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                    halign: 'center'
+                                
+                                MDIconButton:
+                                    icon: "play-circle-outline"
+                                    icon_size: "64sp"
+                                    theme_icon_color: "Custom"
+                                    icon_color: app.theme_cls.primary_color
+                                    pos_hint: {'center_x': 0.5}
+                                    on_press: app.ExerciseTasks("bridges")
+
+                            MDCard:
+                                orientation: 'vertical'
+                                canvas:
+                                    Color:
+                                        rgba: 0.5, 0.5, 0.5, 1
+                                    Rectangle:
+                                        size: self.size
+                                        pos: self.pos
+                                        source: "images/handimags/Handstand-Card.jpg"
+
+                                MDLabel:
+                                    text: "Handstand"
+                                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    font_size: self.width/7
+                                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                    halign: 'center'
+                                
+                                MDIconButton:
+                                    icon: "play-circle-outline"
+                                    icon_size: "64sp"
+                                    theme_icon_color: "Custom"
+                                    icon_color: app.theme_cls.primary_color
+                                    pos_hint: {'center_x': 0.5}
+                                    on_press: app.ExerciseTasks("handstand")
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'Progress'
+            icon: 'check-circle'
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: 20
+                    spacing: 20
+                    canvas:
+                        Color:
+                            rgba: 0.5, 0.5, 0.5, 1
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                            source: "images/Sisyphus.png"
+
+                    MDLabel:
+                        text: "Repetition creates Mastery"
+                        font_name: "fonts/Eurostile.ttf"
+                        halign: 'center'
+                        font_size: root.width/10
+                        size_hint: 1, .4
+                        pos_hint:{'center_y': 0.9}
+                    
+                    MDRoundFlatButton:
+                        text: "Set Reminder"
+                        font_size: '30sp'
+                        font_name: "fonts/Eurostile.ttf"
+                        size_hint: 1, .2
+                        pos_hint: {'center_x': 0.5}
+                        on_press: app.RoutineForm()
+                    
+                    MDRoundFlatButton:
+                        text: "See my Progress"
+                        font_size: '30sp'
+                        font_name: "fonts/Eurostile.ttf"
+                        size_hint: 1, .2
+                        pos_hint: {'center_x': 0.5}
+                        on_press: app.ProgressButton()
+
+<ItemConfirm>
+    on_release: root.set_icon(check)
+
+    CheckboxLeftWidget:
+        id: check
+        group: "check"
+        disabled: True
+        

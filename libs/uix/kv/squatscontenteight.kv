@@ -1,0 +1,74 @@
+<SquatsContentEight>:
+    name: 'Half One-Leg Squats'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('squats')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            height: root.height
+            width: root.width
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                id: pullup_container
+                cols: 1
+                padding: 20
+                spacing: 20
+                adaptive_height: True
+                row_default_height: 25
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Stand straight, with one foot flat on the floor, and the other foot up in the air in front of you. Your elevated foot should be at about the level of your opposite thigh, and the leg should be straight, or nearly so. Place your hands out in front of your chest. This is the start position (fig.35). Bend the hip and knee of the leg which is supporting your bodyweight, until the knee is bent about ninety degrees. This will put your thigh approximately parallel with the floor. At this point, your raised foot should still be some way off the ground. This is the finish position (fig. 36). Pause for a moment under tension, before driving yourself up using the power of your single leg. Keep the back flat and the heel of your supporting leg on the floor at all times."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: 40
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 40
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 5 (both sides)\n• intermediate standard:  2 sets of 10 (both sides)\n• Progression standard:  2 sets of 20 (both sides)"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/squatimags/squat 8 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: 200
+                    source: "images/squatimags/squat 8 fig 2.png"
+
