@@ -3,7 +3,6 @@ from kivy.clock import Clock
 from random import randint
 from plyer import notification
 from kivymd.toast import toast
-from kivy.metrics import dp # Display Pixels.
 from libs.uix.root import Root
 from kivymd.app import MDApp
 from kivy.app import App
