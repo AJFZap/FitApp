@@ -11,6 +11,8 @@ from kivymd.uix.dialog import MDDialog
 from kivymd.uix.list import OneLineAvatarIconListItem
 import re
 
+#TODO See Progress implementation. Check wich is done on the exercise content.
+
 class ItemConfirm(OneLineAvatarIconListItem):
     """
     Checks that are to the left of the MDDialog that serves as the routine form.
