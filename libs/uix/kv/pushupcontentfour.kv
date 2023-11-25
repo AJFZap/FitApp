@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -44,13 +43,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "From the kneeling position, place your palms on the floor and stretch your legs out behind you. Your hands should be shoulder width apart, and directly below your upper chest. Your feet and legs should be kept together. Tighten your supporting muscles, so that your back, hips and legs stay locked in line. Starting with the arms straight, lower yourself approximately half the length of your extended arms, or until your elbows form a right angle. An excellent way to establish how far to descend is to use a standard basketball or soccer ball. Position yourself over the ball at the top of the movement, so that the ball is directly below your hips. This is the start position (fig. 7). Bend at the shoulders and elbows until your hips lightly make contact with the ball (fig. 8)."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -60,17 +59,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 8\n• intermediate standard:  2 sets of 12\n• Progression standard:  2 sets of 25"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pushimags/pushup 4 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pushimags/pushup 4 fig 2.png"
 

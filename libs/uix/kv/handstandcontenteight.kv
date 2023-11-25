@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Kick up into a handstand against a wall. Your body should be slightly arched, with your heels in contact with the wall. Your hands should be six to ten inches from the base of the wall, and shoulder width apart. Keep your arms straight. Now gradually press off with one palm, so that your center of gravity shifts towards the other side of the body. This will put more of your bodyweight through the opposite palm. Continue this transition over the course of a few seconds until there are only a few pounds of pressure left in the pushing palm. Now gently lift that palm away from the floor altogether, and hold it away from your body for balance. You will now be supporting yourself on one straight arm. This is the start position (fig.121). Bend at the elbow and shoulder of your supporting arm until your head is halfway towards the floor. This is the finish position (fig.122). Pause and press up."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,17 +57,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 4 (Both Sides)\n• intermediate standard:  2 sets of 6 (Both Sides)\n• Progression standard:  2 sets of 8 (Both Sides)"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/handimags/hand 8 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/handimags/hand 8 fig 2.png"
 

@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -44,13 +43,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "From the kneeling position, place your palms on the floor and stretch your legs out behind you. Keep your thighs and feet together, and ensure that the hands are below your upper chest and shoulder width apart. Straighten the arms. The hips and spine should be in line. This is the start position (fig 9). Bend at the elbows and shoulders until your breastbone comes to within a fist's width from the floor. In prison pushup competitions, a 'counter' clenches his fist pinky side down on the floor, and counts out when the athlete's chest touches the knuckle of his thumb. If you're training alone and you wish to keep to the right depth, place a baseball or tennis ball directly below your chest (fig. 10). As your chest kisses the ball, pause and push up."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -60,17 +59,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 5\n• intermediate standard:  2 sets of 10\n• Progression standard:  2 sets of 20"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pushimags/pushup 5 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pushimags/pushup 5 fig 2.png"
 

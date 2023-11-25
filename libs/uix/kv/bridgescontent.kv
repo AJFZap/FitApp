@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
                     
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -44,19 +43,19 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Bridging is a simple technique, you just arch your back off the floor by pushing up with your limbs, but if you bridge regularly you can eliminate the host of back problems associated with abuse of the human body.The most important organ of the human body isn't a muscle. It isn't even the heart or lungs. It's the brain. The brain controls these secondary organs, just as it controls virtually every other structure and process in the human body. Our basic psychological identity is associated with the cerebral functioning of the brain; to a large degree, or brain is everything we are. When the brain dies, that's it. No more you.The second most important organ of the human body is the spinal cord, because the spinal cord is the main means by which the brain communicates with the rest of the body. The spinal cord is a slim but incredibly complex tube of nerves, passing from the lower brainstem down the back of the body. No matter how powerful or healthy the brain is, if the spinal cord is damaged, it cannot communicate with the body and is effectively useless. Everybody remembers the tragic paralysis of Superman star Christopher Reeve following his horse riding accident in the mid nineteen-nineties. Reeve suffered no brain damage, the helmet he was wearing prevented it. But his brain was unable to influence his body because his spinal cord was horribly damaged. The spinal cord is extremely delicate and, if unprotected, would be harmed very easily. Even a tiny amount of damage would have disastrous results on the functioning of the body. Fortunately, because of it's paramount importance for health and survival, the spinal column has been well-protected by evolution. It is encased in a thick pillar of flexible, articulated armor consisting of dense individual bones jointed by tough cartilage. These individual bones are the vertebrae, and the cartilage pieces are called intervertebral discs, or simply discs (as in the term 'slipped disc'). The whole bony pillar is known as the spinal column. The spinal column is further protected by a network of connected ligaments and a sophisticated deep layer of muscles which control the movements of the spine. There are more than thirty pairs of basic spinal muscles. (Lack of space prevents me from listing them all and describing their functions. Interested trainees should pick up a copy of Gray's Anatomy.) Far from functioning separately, all these spinal muscles are molded into two thick, powerful, snake-like tubes bordering the spine. These muscle groups are called the erector spinae, or spinal erectors. These twin pillars of muscle form the first line of defense against spinal injuries. In a very basic way, they function as a dense corset of flesh which protects the spinal column against accidents and danger from sharp or blunt objects. In a more dynamic sense, they also control the movement of the spine generally; they ensure that the vertebrae follow a range of motion that protects the spinal cord as well as dictating all spinal motions. Without the erector spinae, you couldn't walk, stand up, twist, or move the torso at all. You couldn't even turn your head. The spinal erectors are a bsolutely crucial But even they pale into insignificance next to the importance of the spinal cord which they help to protect. Impulses travel down through the spinal cord, so the higher an injury, the more devastating the effects."
 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/bridgeimags/basic-bridge.png"
 
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -65,7 +64,7 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Bridging-even just once per week-prevents all these problems. It realigns the vertebrae into the correct position, and strengthens the deep muscles of the back responsible for proper posture. Even the bones become stronger over time, with the practice of the bridge. The discs in your back are made of cartilage, and like all cartilage, they have very little blood flow. Instead, they receive their nutrition from liquid in the joints, called synovial fluid. Because it's not associated with the circulation, fresh fluid can only reach the joints when those joints move around. Bridging removes waste and sends plenty of nutritious fluid to the discs, healing them, preventing degeneration and ensuring maximal health. Strong spinal muscles can reduce the likelihood of slipped discs, and even help fix the condition. Aside from the above benefits, bridging will make all your athletic movements more powerful. Bridging is the ultimate exercise for the spinal muscles. The master of the bridge can be easily identified by two very cool pythons running up either side of the spine. But as well as being the primary exercise for the erector spinae, bridging develops practically every other muscle in the body. The arms and legs get work in pressing the body away from the ground, and the shoulder girdle and upper back get a fantastic workout in the process, too. The entire front side of the body-usually stubbornly tight in male athletes-gets a maximum stretch. Areas which particularly benefit are the knees, quadriceps, hip flexors, abdominals and chest. The unique overhead-and-back movement during bridging removes calcium deposits in the shoulders and makes the torso very supple. A lot of practitioners-including myself-believe that regular practice of the bridge can expand the ribcage and increase lung capacity. Bridging bulletproofs the spinal column in preparation for heavy, explosive, or unexpected movements, allowing you to train harder, heavier, and faster. Because the spine is like a universal joint, strong spinal muscles unlock the power inherent in the waist, torso and limbs, power an athlete simply couldn't access if they had a weak back. The spine is constantly working during motion, so conditioned spinal muscles also result in extra endurance, both for sports and life generally. I could go on, but I won't. In essence, the message is simple: bridging will do away with back pain, make you healthier; stronger, quicker, more agile, and increase your stamina. You should be bridging."
 

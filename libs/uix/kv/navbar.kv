@@ -4,8 +4,13 @@
 
     MDBottomNavigation:
         id: bottom_nav
-        selected_color_background: "purple"
+        selected_color_background: "#800080"
         text_color_active: "lightgrey"
+        buttonColor: '#673AB7'
+
+        ### These two variables hold the sizes of the images and the labes needed for every exercise content and the routines.
+        imageSize: dp(200)
+        textSize: dp(20)
 
         MDBottomNavigationItem:
             name: 'screen 1'
@@ -14,8 +19,8 @@
             MDScreen:
                 MDBoxLayout:
                     orientation: 'vertical'
-                    padding: 20
-                    spacing: 20
+                    padding: dp(20)
+                    spacing: dp(20)
                     canvas:
                         Color:
                             rgba: 0.5, 0.5, 0.5, 1
@@ -28,23 +33,31 @@
                         text: "Welcome, champion in the making"
                         font_name: "fonts/Eurostile.ttf"
                         halign: 'center'
-                        font_size: root.width/10
+                        font_size: '40sp'
+                        outline_width: dp(2)
+                        outline_colour: (0, 0, 0, 1)
                         size_hint: 1, .4
                         pos_hint:{'center_y': 0.9}
                     
                     MDRoundFlatButton:
                         text: "Training Routines"
-                        font_size: '30sp'
+                        font_size: '20sp'
                         font_name: "fonts/Eurostile.ttf"
-                        size_hint: 1, .2
+                        text_color: 'white'
+                        line_color: bottom_nav.buttonColor
+                        md_bg_color: bottom_nav.buttonColor
+                        size_hint: .8, .1
                         pos_hint: {'center_x': 0.5}
                         on_press: app.root.set_current('Routines')
                     
                     MDRoundFlatButton:
                         text: "Motivation"
-                        font_size: '30sp'
-                        font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
-                        size_hint: 1, .2
+                        font_size: '20sp'
+                        font_name: "fonts/Eurostile.ttf"
+                        text_color: 'white'
+                        line_color: bottom_nav.buttonColor
+                        md_bg_color: bottom_nav.buttonColor
+                        size_hint: .8, .1
                         pos_hint: {'center_x': 0.5}
                         on_press: app.MotivQuote()
 
@@ -68,8 +81,6 @@
                 ScrollView:
                     do_scroll_x: False
                     do_scroll_y: True
-                    height: root.height
-                    width: root.width
                     effect_cls: 'ScrollEffect'
 
                     MDBoxLayout:
@@ -81,19 +92,23 @@
                             text: "THE BIG SIX"
                             font_name: "fonts/Eurostile.ttf"
                             halign: 'center'
-                            font_size: root.width/8
+                            font_size: '40sp'
+                            outline_width: dp(2)
+                            outline_colour: (0, 0, 0, 1)
                             valign: 'top'
                             size_hint_y: None
-                            height: 100
+                            height: dp(100)
 
                         MDGridLayout:
+                            id: cards
                             cols: 2
-                            padding: 20
-                            spacing: 20
+                            padding: dp(20)
+                            spacing: dp(20)
                             size_hint: 1, None
                             height: self.minimum_height
-                            row_default_height: 400
+                            row_default_height: dp(200)
                             row_force_default: True
+                            sizeFont: '20sp'
                             
                             MDCard:
                                 orientation: 'vertical'
@@ -112,7 +127,9 @@
                                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                                     size_hint_y: None
                                     size: self.texture_size
-                                    font_size: self.width/7
+                                    font_size: cards.sizeFont
+                                    outline_width: dp(2)
+                                    outline_colour: (0, 0, 0, 1)
                                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                                     halign: 'center'
                                 
@@ -139,7 +156,9 @@
                                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                                     size_hint_y: None
                                     size: self.texture_size
-                                    font_size: self.width/7
+                                    font_size: cards.sizeFont
+                                    outline_width: dp(2)
+                                    outline_colour: (0, 0, 0, 1)
                                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                                     halign: 'center'
                                 
@@ -166,7 +185,9 @@
                                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                                     size_hint_y: None
                                     size: self.texture_size
-                                    font_size: self.width/7
+                                    font_size: cards.sizeFont
+                                    outline_width: dp(2)
+                                    outline_colour: (0, 0, 0, 1)
                                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                                     halign: 'center'
 
@@ -193,7 +214,9 @@
                                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                                     size_hint_y: None
                                     size: self.texture_size
-                                    font_size: self.width/7
+                                    font_size: cards.sizeFont
+                                    outline_width: dp(2)
+                                    outline_colour: (0, 0, 0, 1)
                                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                                     halign: 'center'
                                 
@@ -220,7 +243,9 @@
                                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                                     size_hint_y: None
                                     size: self.texture_size
-                                    font_size: self.width/7
+                                    font_size: cards.sizeFont
+                                    outline_width: dp(2)
+                                    outline_colour: (0, 0, 0, 1)
                                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                                     halign: 'center'
                                 
@@ -247,7 +272,9 @@
                                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                                     size_hint_y: None
                                     size: self.texture_size
-                                    font_size: self.width/7
+                                    font_size: cards.sizeFont
+                                    outline_width: dp(2)
+                                    outline_colour: (0, 0, 0, 1)
                                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                                     halign: 'center'
                                 
@@ -266,8 +293,8 @@
             MDScreen:
                 MDBoxLayout:
                     orientation: 'vertical'
-                    padding: 20
-                    spacing: 20
+                    padding: dp(20)
+                    spacing: dp(20)
                     canvas:
                         Color:
                             rgba: 0.5, 0.5, 0.5, 1
@@ -280,23 +307,31 @@
                         text: "Repetition creates Mastery"
                         font_name: "fonts/Eurostile.ttf"
                         halign: 'center'
-                        font_size: root.width/10
+                        font_size: '40sp'
+                        outline_width: dp(2)
+                        outline_colour: (0, 0, 0, 1)
                         size_hint: 1, .4
                         pos_hint:{'center_y': 0.9}
                     
                     MDRoundFlatButton:
                         text: "Set Reminder"
-                        font_size: '30sp'
+                        font_size: '20sp'
                         font_name: "fonts/Eurostile.ttf"
-                        size_hint: 1, .2
+                        text_color: 'white'
+                        line_color: bottom_nav.buttonColor
+                        md_bg_color: bottom_nav.buttonColor
+                        size_hint: .8, .1
                         pos_hint: {'center_x': 0.5}
                         on_press: app.RoutineForm()
                     
                     MDRoundFlatButton:
                         text: "See my Progress"
-                        font_size: '30sp'
+                        font_size: '20sp'
                         font_name: "fonts/Eurostile.ttf"
-                        size_hint: 1, .2
+                        text_color: 'white'
+                        line_color: bottom_nav.buttonColor
+                        md_bg_color: bottom_nav.buttonColor
+                        size_hint: .8, .1
                         pos_hint: {'center_x': 0.5}
                         on_press: app.ProgressButton()
 

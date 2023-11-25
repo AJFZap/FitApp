@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Stand up straight with your feet approximately shoulder width apart. The space behind you should be clear of objects for at least the distance of your height. This is the start position. Place your hands on your hips and begin pushing your pelvis forwards (fig.101). When your pelvis is as far front as it will go, begin bending your knees as you simultaneously arch your spine backwards. Tilt your head back and look behind you as you go. This must all form one smooth movement. Continue this arching motion until you can see the ground a few feet behind you. As soon as you see the floor, take your hands off your hips and pass them back over your shoulders, beyond your head (fig.102). This moving posture requires considerable flexibility, but you will find that the forwards shift of your hips combined with the bend in the knees prevents you from falling backwards. Extend your arms as you keep the movement going, until your palms are resting on the floor. This is the finish position, the full bridge hold (fig.103). From here, bend the arms and legs until your back is on the floor. Now stand up into the start position again to begin your second repetition. Breath normally throughout the set."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,22 +57,22 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 1\n• intermediate standard:  2 sets of 3\n• Progression standard:  2 sets of 6"
                 
                 Image:
                     size_hint_y: None
-                    height: 200
+                    height: self.parent.imageSize
                     source: "images/bridgeimags/bridge 9 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/bridgeimags/bridge 9 fig 2.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/bridgeimags/bridge 9 fig 3.png"
 

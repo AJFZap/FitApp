@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Throw a towel over a horizontal bar. Jump up and grasp the bar with your strongest grip so that the hanging towel is towards the inside of your hand. With your opposite hand, grab the towel as low as possible-around eye level is about right for most athletes. Bend the knees with the ankles looped behind the body. Keep the shoulders braced, and retain a slight bend in the arm which is holding the bar. This is the start position (fig. 57). Now begin to pull yourself up. For the first half of the movement-until the elbow of the arm holding the bar is bent at a right angle, assist yourself by pulling on the towel. Halfway up-when the elbow of the arm holding the bar is bent at a right-angle-release the towel, and continue pulling yourself up with just one arm until your chin is over the bar (fig. 58). Pause, before lowering yourself down using the power of your lone arm. When you reach the lowest position, grip the towel once again. Pause and repeat."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,17 +57,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 3 (both sides)\n• intermediate standard:  2 sets of 5 (both sides)\n• Progression standard:  2 sets of 7 (both sides)"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pullimags/pull 9 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pullimags/pull 9 fig 2.png"
 

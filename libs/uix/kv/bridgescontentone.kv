@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Lie on your back, with your legs stretched out and your hands crossed on your stomach. Draw your feet in, bending the knees w1til your shins are nearly parallel to the ground and your feet your feet are flat on the floor. The feet should be shoulder width apart or a little less, depending upon your frame. Your heels will be around six to eight inches from your buttocks. This is the start position (fig.83). Press down through the feet, lifting the hips and back clear of the ground until only the shoulders and feet are supporting the bodyweight. At this point, your thighs, trunk and torso should form a straight line, with no sagging of the hips. This is the finish position (fig.84). Pause in the top position for a moment, before reversing the motion, lowering your body back to the start position. Repeat the exercise for your target repetitions, exhaling as you go up, inhaling on the way down."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,17 +57,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 25\n• Progression standard:  3 sets of 50"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/bridgeimags/bridge 1 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/bridgeimags/bridge 1 fig 2.png"
 

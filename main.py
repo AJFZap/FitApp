@@ -1,14 +1,16 @@
 from kivy.core.window import Window
-from libs.uix.root import Root
-from kivymd.app import MDApp
-from kivymd.uix.button import MDRaisedButton, MDFlatButton
-from kivymd.uix.dialog import MDDialog
-from kivymd.uix.list import OneLineAvatarIconListItem
-import re
 from kivy.clock import Clock
 from random import randint
 from plyer import notification
 from kivymd.toast import toast
+from kivy.metrics import dp # Display Pixels.
+from libs.uix.root import Root
+from kivymd.app import MDApp
+from kivy.app import App
+from kivymd.uix.button import MDFlatButton
+from kivymd.uix.dialog import MDDialog
+from kivymd.uix.list import OneLineAvatarIconListItem
+import re
 
 class ItemConfirm(OneLineAvatarIconListItem):
     """
@@ -88,6 +90,8 @@ class FitApp(MDApp):
         """
         TODO: Progress should give a screen where you check the exercises that you have done and give you a visual percentage of the completion.
         """
+        # get_screen('main').ids.bottom_nav.textSize)
+        print(App.get_running_app().root.get_screen('main').ids)
         toast("Not implemented yet,sorry!")
 
     def ApplyRoutine(self, obj):
@@ -178,8 +182,8 @@ class FitApp(MDApp):
             
             if self.exercises["abs"] == 0:
                 for name in names:
-                    button = MDRaisedButton(text= f"{names[names.index(name)]}:\n {absName[names.index(name)]}",
-                                        size_hint= (1,1),
+                    button = MDFlatButton(text= f"{names[names.index(name)]}:\n {absName[names.index(name)]}",
+                                        size_hint= (.8,1), md_bg_color= '#673AB7', line_color= '#673AB7',
                                         on_press= self.ButtonBind,
                                         )
                     self.root.get_screen('abs').ids.abs_container.add_widget(button)
@@ -191,8 +195,8 @@ class FitApp(MDApp):
             
             if self.exercises["pushups"] == 0:
                 for name in names:
-                    button = MDRaisedButton(text= f"{names[names.index(name)]}:\n {pushName[names.index(name)]}",
-                                                size_hint= (1,1),
+                    button = MDFlatButton(text= f"{names[names.index(name)]}:\n {pushName[names.index(name)]}",
+                                                size_hint= (.8,1), md_bg_color= '#673AB7', line_color= '#673AB7',
                                                 on_press= self.ButtonBind,
                                                 )
                     self.root.get_screen('pushup').ids.pushup_container.add_widget(button)
@@ -203,8 +207,8 @@ class FitApp(MDApp):
 
             if self.exercises["pullups"] == 0:
                 for name in names:
-                    button = MDRaisedButton(text= f"{names[names.index(name)]}:\n {pullName[names.index(name)]}",
-                                                size_hint= (1,1),
+                    button = MDFlatButton(text= f"{names[names.index(name)]}:\n {pullName[names.index(name)]}",
+                                                size_hint= (.8,1), md_bg_color= '#673AB7', line_color= '#673AB7',
                                                 on_press= self.ButtonBind,
                                                 )
                     self.root.get_screen('pullups').ids.pullup_container.add_widget(button)
@@ -215,8 +219,8 @@ class FitApp(MDApp):
             
             if self.exercises["squats"] == 0:
                 for name in names:
-                    button = MDRaisedButton(text= f"{names[names.index(name)]}:\n {squatName[names.index(name)]}",
-                                                size_hint= (1,1),
+                    button = MDFlatButton(text= f"{names[names.index(name)]}:\n {squatName[names.index(name)]}",
+                                                size_hint= (.8,1), md_bg_color= '#673AB7', line_color= '#673AB7',
                                                 on_press= self.ButtonBind,
                                                 )
                     self.root.get_screen('squats').ids.squats_container.add_widget(button)
@@ -227,8 +231,8 @@ class FitApp(MDApp):
             
             if self.exercises["bridges"] == 0:
                 for name in names:
-                    button = MDRaisedButton(text= f"{names[names.index(name)]}:\n {bridgeName[names.index(name)]}",
-                                                size_hint= (1,1),
+                    button = MDFlatButton(text= f"{names[names.index(name)]}:\n {bridgeName[names.index(name)]}",
+                                                size_hint= (.8,1), md_bg_color= '#673AB7', line_color= '#673AB7',
                                                 on_press= self.ButtonBind,
                                                 )
                     self.root.get_screen('bridges').ids.bridges_container.add_widget(button)
@@ -239,8 +243,8 @@ class FitApp(MDApp):
             
             if self.exercises["handstand"] == 0:
                 for name in names:
-                    button = MDRaisedButton(text= f"{names[names.index(name)]}:\n {handName[names.index(name)]}",
-                                                size_hint= (1,1),
+                    button = MDFlatButton(text= f"{names[names.index(name)]}:\n {handName[names.index(name)]}",
+                                                size_hint= (.8,1), md_bg_color= '#673AB7', line_color= '#673AB7',
                                                 on_press= self.ButtonBind,
                                                 )
                     self.root.get_screen('handstand').ids.handstand_container.add_widget(button)

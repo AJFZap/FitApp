@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Jump up and firmly squeeze an overhead bar using your strongest gripping position. Your legs should be clear of the floor, with your knees bent so that your feet are behind you. Loop one ankle over the other to keep your legs still. Place your non-lifting arm in a comfortable position (you should have found your ideal position when you learned Level 8, half one-arm pullups). Your working shoulder should be set tight, and your body tensed for action. You are about to perform an advanced strength feat, and this should be reflected in your psychology. Your working arm should be virtually straight, with just a little kink in it to take the stress of the joints. This is the start position (fig. 59). Bend at the elbow and shoulder and pull your body up with as little momentum as possible until your chin is over the height of the bar. This is the finish position (fig.60). Pause, and smoothly lower yourself back down to the start position. Pause at the bottom and repeat-if you can!"
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,17 +57,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 1\n• intermediate standard:  2 sets of 3\n• Progression standard:  2 sets of 6"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pullimags/pull 10 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pullimags/pull 10 fig 2.png"
 

@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Stand approximately one arm's length from a wall. If in doubt about your positioning, it's better to stand closer to the wall than further from it, you can more safely adjust your position this way. Your feet should be about shoulder width apart. Push the hips forwards and begin bending backwards. Raise your chin, tilting your head back as far as is comfortable. Continue smoothly bending back until you can see the wall behind you. As soon as you can see the wall, raise your hands, moving them over your shoulders and placing the palms flat on the wall, fingers pointing down, level with your head. This is the start position (fig.95). Shift some of your bodyweight back through your hands, and lower one by a few inches, before placing it securely on the wall again. Now follow suit with your opposite hand, lowering it even further on the wall. Keep bending backwards as you 'walk' down the wall with your hands (fig.96). As you move downwards, you will need to move slightly away from the wall to accommodate your body bend. Do this by taking mini-steps forwards any time you feel the need. Continue alternating this movement until you run out of wall. When this occurs, place your hands flat on the floor. At this stage you will be in a full bridge hold next to the wall. This is the bottom position (fig.97). From here, simply lower your backside to the floor, and stand up. Return to the start position, and walk back down again. Breathe regularly as you go."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,22 +57,22 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 3\n• intermediate standard:  2 sets of 6\n• Progression standard:  2 sets of 10"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/bridgeimags/bridge 7 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/bridgeimags/bridge 7 fig 2.png"
 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/bridgeimags/bridge 7 fig 3.png"
 

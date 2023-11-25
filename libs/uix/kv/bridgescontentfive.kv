@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: exercise.sizeFont
                     font_name: "fonts/Eurostile.ttf"
                     text: "This exercise will require a basketball or soccer ball to monitor your form. Sit down on the floor, placing the ball on the ground right behind you. Lay back so that you are lying down with only your shoulders and the soles of your feet on the floor. The feet should be shoulder width apart or a little closer, and the ball should be supporting the small of your back. If you find this position uncomfortable, lay a folded towel or cushion over the ball before you begin. Place the hands alongside the head, with the palms flat on the floor and your fingers pointing towards your toes. Now press through the hands, pushing your shoulders and head off the floor so that only the soles of your feet, the ball, and your palms are supporting your bodyweight. This is the start position (fig.91). From here, push the hips as high as you can, extending the arms and legs and lifting the back up until it is well clear of the ball. Keep going until your back is fully arched. This is the finish position (fig.92). Pause for a moment at the top, before lowering yourself slowly to the start position. After starting the set, only descend until the small of your back lightly touches the ball, don't rest your bodyweight on it. Repeat, breathing as normally as possible."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: exercise.sizeFont
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,17 +57,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: exercise.sizeFont
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 8\n• intermediate standard:  2 sets of 15\n• Progression standard:  2 sets of 20"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: exercise.imageSize
                     source: "images/bridgeimags/bridge 5 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: exercise.imageSize
                     source: "images/bridgeimags/bridge 5 fig 2.png"
 

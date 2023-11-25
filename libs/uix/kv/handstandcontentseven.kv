@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Place a basketball by the base of a wall. Kick up into a wall handstand next to the basketball using whichever technique you find easiest, then reach out and place one of your palms on the basketball. This motion sounds simple but is in fact very difficult; it will require supporting your bodyweight on one locked arm for a fraction of a second, or as long as it takes to find the ball. Once your palm is secured on the basketball, position it so that your hands are about shoulder width apart. The arm of the hand which is on the floor should be straight, but your other arm will be bent. Apply your weight as evenly as you can through both hands, breathing smoothly. Your triceps, biceps and shoulders need to work very hard at this point, or you may lose control of the ball and crash down. This is the start position (fig.119). Now bend at the elbows and shoulders until the head gently touches the floor. This is the finish position (fig.120). Pause, and press back up."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,17 +57,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 5 (Both Sides)\n• intermediate standard:  2 sets of 8 (Both Sides)\n• Progression standard:  2 sets of 10 (Both Sides)"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/handimags/hand 7 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/handimags/hand 7 fig 2.png"
 

@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Find a horizontal base you can hold onto which will safely carry your bodyweight. It needs to be at least as high as your hips. The top of a big, sturdy, table or desk is usually the best option. Get down so that your chest and lower body are underneath the table and reach up so that you can hold the lip, using an overhand grip. Ideally your hands should be shoulder width but this will not always be possible depending upon what kind of table or desk you have access to. Now pull yourself up so that your back is off the floor. Depending upon the height of the table, your arms will probably have to be slightly bent for this. Keep your body tensed and locked straight, so that its weight goes only thorough your hands and heels. This is the start position (fig. 43). Now smoothly pull yourself up, keeping the body (especially the knees) aligned, until your chest touches the lip of the table at the point where your hands are gripping. This is the finish position (fig. 44). Pause for a count of one, before lowering back to the start position. Repeat."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,17 +57,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 20\n• Progression standard:  3 sets of 30"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pullimags/pull 2 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/pullimags/pull 2 fig 2.png"
 

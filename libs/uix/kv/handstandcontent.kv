@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
                     
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,14 +42,14 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "It's the act of balancing on the hands with one's feet in the air. An also the safest way to train the shoulders without causing damage."
 
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -59,19 +58,19 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "The handstand pushup would be an important technique in the pantheon of training exercises, provided it simply trained the shoulders without causing injury. But it gives so much more, it's almost beyond belief. Let's start with strength. In effect, performing handstand pushups is the equivalent of shoulder pressing your bodyweight. It may take years (and many injuries) to get to this level of strength with a barbell-in fact, many athletes just never get there. But the average person can learn to do handstand pushups in a matter of months. The result is incredibly powerful, muscularized shoulders in a short span of time. The handstand pushup also teaches advanced balance and total-body coordination skills that just can't be replicated with weights. The act of stabilizing yourself upside-down causes the vestibular system-the balance organ in the inner ear-to adapt and become more efficient. This translates into a sense of heightened equilibrium and kinesthetic awareness in all your other movements throughout the day, whether you are upside-down or not. The simple act of adopting the inverse posture-being upside-down-also has major benefits. The blood supply is reversed-the veins and arteries work against gravity in the opposite direction and become more supple, stronger and healthier. The same principle applies to the digestive organs. When you're upside-down, the head becomes flushed with fresh blood. This is a tonic for the brain, and you will find that you feel refreshed and alert after finishing your exercises."
 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/handimags/hand-basic.png"
 
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -80,12 +79,12 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Handstand pushups are a difficult movement. You will inevitably develop your own unique style. The best way to learn is to slowly progress through the ten steps, milking each exercise of everything it can teach you by way of balance, muscle control, coordination and power output. Here are some technical pointers that will help you perfect your technique during your journey:\n• Handstand pushups can be done either with the back against the wall, or 'free'-without support. The latter style requires that the athlete expend as much energy on balance as on strength.\n• When kicking up, don't keep the hands too dose to the wall. A position of six to ten inches away-sometimes more-will be much more stable. The hands should be approximately shoulder width apart. Weight-trained men may be tempted to place the hands wider than this, but doing so will make you less stable and render your motionless efficient.\n• During the handstand pushup, don't force your elbows apart as you would in a military press. They will naturally angle inwards; either straight out in front of the chest, or diagonally out. Either is fine. Do what your body wants!\n• Don't keep the body straight. It will want to curve somewhat, with the feet ending up a little farther back than the head. This is due to the natural equilibrium of the inverse body, and represents good technique. Don't arch your back excessively, but don't try to iron your body straight. Retain a gentle curve.\n• At first, there will be the tendency to crash the back flat against the wall with the full body-weight. This is a bad habit. Eventually, you want to get to the stage where only your heels are touching the wall. If you have followed the pointers above, and your hands are a short distance away from the wall with your body displaying a gentle curve, the heels will automatically become the point of contact with the wall as a consequence. You won't need to force yourself into any weird postures.\n• Over time, your feet should only touch the wall with a few pounds of pressure-just enough to retain balance. If you slowly try to use less pressure over time, you will be able to move towards non-supported handstand pushups with very little effort if you wish to.\n• Some guys find that there is some friction between their heels and the wall during wall work. This makes the pushups harder. You can alleviate any friction by wearing thick socks, and doing the exercises against smooth walls. I've seen athletes tape duct tape against the brick walls where they practice, to help their heels glide up and down. You might need this tip, you might not. See how you go."
 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/handimags/hand-basic 2.png"
 

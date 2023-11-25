@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Stand up straight with one foot flat on the floor, and another resting firmly on a basketball located approximately one foot length in front of the other foot. The feet should be shoulder width apart or a little wider. Your arms should be out in front of you, directly opposite your chest. This is the start position (fig. 33). Bend at the knees and hips until the back of the thigh of your non-ball leg touches the corresponding calf. You will not be able to descend any further, despite the fact that your ball leg is not compressed as much. This is the finish position (fig. 34). While learning this position, you may tip backwards, so ensure that you have enough clear space behind you just in case. This applies to all deep squatting. Pause briefly, before pushing yourself back up to the start position with both legs. At no point during the exercise should you raise your heel, rock forwards or bounce, despite the fact that you may instinctively want to do these things at first. Use strength."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,17 +57,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 5 (both sides)\n• intermediate standard:  2 sets of 10 (both sides)\n• Progression standard:  2 sets of 20 (both sides)"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/squatimags/squat 7 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/squatimags/squat 7 fig 2.png"
 

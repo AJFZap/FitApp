@@ -20,21 +20,20 @@
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            height: root.height
-            width: root.width
             effect_cls: 'ScrollEffect'
 
             MDGridLayout:
-                id: pullup_container
                 cols: 1
-                padding: 20
-                spacing: 20
+                padding: dp(20)
+                spacing: dp(20)
                 adaptive_height: True
-                row_default_height: 25
-
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -43,13 +42,13 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "Approach a solid wall and place your palms flat on the ground approximately shoulder width apart and about six to ten inches from the wall. Bend at the knees and kick up against the wall into a handstand position. If you have worked through the steps so far you will now be pretty expert at this. If you have developed your own technique, that's fine; calisthenics isn't gymnastics-it's the muscle-building portion of the exercise that's of importance, not how you get there. Once you have found the wall, keep contact with it through your heels, maintaining a slight backwards arch in your body. Your arms should be straight. This is the start position (fig.115). Bend at the shoulders and elbows until the top of your head gently makes contact with the floor. This is the finish position (fig.116). Pause briefly for a second, before pushing yourself back up to the start position. Apply muscular control and concentration in all inverse movements to ensure safety. Breathe as smoothly and evenly as possible."
 
                 MDLabel:
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     halign: 'center'
                     font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
                     underline: True
@@ -58,17 +57,17 @@
                 MDLabel:
                     size_hint_y: None
                     size: self.texture_size
-                    font_size: 40
+                    font_size: self.parent.textSize
                     font_name: "fonts/Eurostile.ttf"
                     text: "• Beginner standard:  1 set of 5\n• intermediate standard:  2 set of 10\n• Progression standard:  2 set of 15"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/handimags/hand 5 fig 1.png"
                 
                 Image:
                     size_hint_y: None
-                    height: 400
+                    height: self.parent.imageSize
                     source: "images/handimags/hand 5 fig 2.png"
 
