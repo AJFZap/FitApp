@@ -1,0 +1,75 @@
+#:kivy 2.2.1
+
+<SquatsContentSix>:
+    name: 'Close Squats'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('squats')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(20)
+                spacing: dp(20)
+                adaptive_height: True
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Stand up straight with your heels together, toes angled out very slightly. Your arms should be straight out in front of your chest. This is the start position (fig. 31). Bend at the knees and hips until your hamstrings are resting on your calves and you can go no further. Your chest will be pressed into your thighs (fig. 32). Do not raise the heels. To prevent yourself from tipping backwards, you may have to flex your shins to pull your toes up so that you ease forwards. Return to the start position using leg power only."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 5\n• intermediate standard:  2 sets of 10\n• Progression standard:  2 sets of 20"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/squatimags/squat 6 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/squatimags/squat 6 fig 2.png"
+

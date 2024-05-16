@@ -1,0 +1,82 @@
+#:kivy 2.2.1
+
+<PushUpContent>:
+    name: 'Pushups'
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+        
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('pushup')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(20)
+                spacing: dp(20)
+                adaptive_height: True
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "What is a pushup?"          
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "The pushup is the ultimate upper body exercise. It generates strength, builds muscle, develops powerful tendons and trains the upper body pressing muscles to work in coordination with the midsection and the lower body. The pushup protects the joints and builds functional strength, real-world strength not just the kind of strength that can be used in a gym. This is why the pushup is the number one muscle-building exercise in military traing camps and academies the world over. It always has been, since the first warriors trained for strength."
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: 4self.parent.textSize0
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Benefits"             
+ 
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Pushups dynamically develop the network of pressing muscles around the torso, strongly working the pec major, anterior deltoid and pec minor. Pushups also build up all three heads of the triceps, the major muscle of the upper arm. Pushups train these important muscles through their ideal range of motion, but in a correct pushup many additional muscles get a good isometric workout-meaning that they have to contract statically, to lock the body into place. Muscles trained isometrically during pushups include the lats, all the deep muscles of the chest and ribcage, the spinal muscles, the abdomen and waist, the hip muscles, the glutes, the quadriceps and the anterior tibialis (which is the shin muscle). Even the feet and toes gain some isometric benefit! When performed progressively and with correct form, pushups also have a strengthening effect on the joints and tendons, adding to their overall power and health. The tiny yet vital deep muscles and tissues which support the fingers, wrist, forearm and elbow become much stronger over time when pushups are performed, reducing the chances of carpal tunnel syndrome, tennis elbow, Golfer's elbow and general aches and pains."
+
+                MDLabel:
+                    halign: 'center'
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Perfect Technique"
+               
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Everybody's 'perfect' technique will be slightly different. This is purely due to different body types-variations in limb length, relative strength, body fat ratio and injury history all play subtle roles. For this reason, rather than write out an iron-clad description of the 'perfect' pushup, I'd like to share a few general rules and ideas:\n• Avoid bizarre angles and hand positions. Find an exercise groove that's comfortable for you.\n• Keep the torso, hips and legs in alignment. Sticking the butt in the air during pushups only occurs because the waIst is too weak to lock the body in place.\n• Keep the legs together. Splaying the legs apart removes the need to stabilize the torso during motion and makes the exercises easier.\n• The arms should be straight at the top of the movement, but don't hyperextend the elbows, keep a slight kink in your elbows to prevent the joint from pinching. (This is sometimes called keeping your arms 'soft.')\n• Breathing should be smooth. As a rule of thumb, breathe out on the way up, and in on the way down. If breathing becomes labored and you have trouble following this formula, take extra breaths."
+

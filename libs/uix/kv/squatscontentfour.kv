@@ -1,0 +1,75 @@
+#:kivy 2.2.1
+
+<SquatsContentFour>:
+    name: 'Half Squats'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('squats')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(20)
+                spacing: dp(20)
+                adaptive_height: True
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Stand with the feet shoulder width apart, or slightly wider. Don't keep your feet perfectly in line with one another; allow your toes to point very slightly outwards. Place your hands in a comfortable position-on your hips, chest or shoulders is fine. This is the start position (fig. 27). Now bend at the hips and knees until your knees are angled at ninety degrees, or (in other words) your thighs are parallel to the floor. This is the finish position (fig. 28). You can use a mirror or ask a friend the first few times until your body learns the right depth. Don't rush the technique, and never bounce; pause in mid-air at the bottom position for a one count before returning to the start position under full muscular control. Keep the back straight throughout the motion, and keep your heels flat on the floor. Your knees should always point in the same direction as your feet; don't ever allow the knees to 'track' inwards as you squat. The outwards angle of your toes will assist you with this."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 8\n• intermediate standard:  2 sets of 35\n• Progression standard:  2 sets of 50"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/squatimags/squat 4 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/squatimags/squat 4 fig 2.png"
+

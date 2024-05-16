@@ -1,0 +1,77 @@
+#:kivy 2.2.1
+
+<AbsContentOne>:
+    name: 'Knee Tucks'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('abs')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(20)
+                spacing: dp(20)
+                adaptive_height: True
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Sit on the edge of a chair or bed. Lean back a little, grip the edge of the seat with your hands, and straighten your legs. Your feet should be together with the heels raised a few inches from the floor. This is the start position (fig. 61). Smoothly bring the knees up and in until they are approximately six to ten inches from your chest. Exhale as you draw the knees in. By the time the motion is complete, you should have exhaled fully and your abs should be tightly contracted. This is the finish position (fig. 62). Pause for a count of one before reversing the motion and finishing again in the start position. Inhale as you extend. Your feet should follow a straight line backwards and forwards, and should not touch the floor until the set is completed. Keep the stomach tucked in at all times. Resist the urge to pump out reps quickly. As with all waist techniques, take extra breaths between reps if you need to."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 25\n• Progression standard:  3 sets of 40"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/absimags/abs 1 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/absimags/abs 1 fig 2.png"
+

@@ -1,0 +1,68 @@
+#:kivy 2.2.1
+
+<AbsContent>:
+    name: 'Leg Raises'
+    
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('abs')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(20)
+                spacing: dp(20)
+                adaptive_height: True
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "What is a leg raise?"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "In the old days of training-before the nineteen-seventies-two exercises used to vie for the title of 'ultimate' midsection exercise. These exercises were sit-ups and leg raises. Sit-ups and legraises work the midsection in similar ways, but from opposite directions; in sit-ups, the abdomen contracts to lift the torso; in leg raises, the abdomen contracts to lift the lower limbs. Forcing the abs to work while the body is hanging causes many more muscles to come into play than during sit-up training. Hanging develops the grip, shoulders and lats, and forces the serratus muscles around the ribcage to work strongly as an intermediary link between the ribs and midsection. To keep the legs straight, the deeper muscle heads of the quadriceps also work hard during leg raises."
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    bold: True
+                    text: "Benefits"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "You end up with:\n• An incredibly powerful midsection-highly trained not just in the central abdomen, but in all the muscles of the waist; the obliques, transversus, psoas, intercostals and serratus. A dynamite midsection that actually makes the whole body stronger.\n• A supremely functional, flexible waist and hips that add power not only to the spine, but which can lift the legs up with incredible explosive force during jumping, kicking, climbing or any other gymnastic or athletic motions.\n• A stomach wall so thick and well-trained that it can fend off blows to the breadbasket-muscles so strong that they will actually hurt an attacker to punch or kick!• A lean gut that supports the internal organs so perfectly that even important functions like respiration and digestion become permanently efficient and healthy.\n• Thick, scarily well-developed abdominal muscles that look more like bricks on a building than cute 'fitness model' abs."
+

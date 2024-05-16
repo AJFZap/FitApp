@@ -1,0 +1,75 @@
+#:kivy 2.2.1
+
+<PullUpContentFour>:
+    name: 'Half Pullups'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('pullups')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(20)
+                spacing: dp(20)
+                adaptive_height: True
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Take hold of a horizontal bar. The bar should be high enough that your feet are clear of the f1oor-even if only by an inch-when your body hangs down straight. Use an overhand grip which is shoulder width or a little wider. Jump up so that you are supporting your weight on arms that are bent approximately at right angles (your upper arms should be parallel to the floor). Keep your shoulders tight. Bend at the knees, looping one ankle over the other to take the legs out of the movement. This is the start position (fig. 47). Smoothly pull yourself up by bending at the shoulders and elbows until your chin clears the height of the bar. This is the finish position (fig. 48). Allow your elbows to travel forwards if it seems 'right' for you. Pause at the top for a moment, before lowering to the start position under control. Repeat as needed. After you get set, keep the legs still throughout the entire motion."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 8\n• intermediate standard:  2 sets of 11\n• Progression standard:  2 sets of 15"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/pullimags/pull 4 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/pullimags/pull 4 fig 2.png"
+

@@ -1,0 +1,80 @@
+#:kivy 2.2.1
+
+<BridgesContentEight>:
+    name: "Wall Walking Bridges 'U'"
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('bridges')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(20)
+                spacing: dp(20)
+                adaptive_height: True
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "This step begins when you are standing totally clear of the wall, with your back to it. From here, assume the start position you learned for walking down; bend backwards with your hands over your shoulders making contact with the wall (fig.95). Then walk down the wall as described in Level 7, until you are in a full bridge hold next to the base of the wall (fig.97). Now it's time to go back up. This is done by reversing the movement. Place one palm back on the wall, pushing through it. Next, place your other palm above it (fig.98). This transition whereby your palms go from the floor back onto the wall is the hardest part of the technique. Now simply place one palm above the other repeatedly as you go back up the wall. As your body straightens, you will probably have to take mini-steps back towards the wall to keep a healthy pressure going through your palms. Continue walking upwards until you are nearly straight (fig.99). From here, push gently away from the wall until you are standing totally clear from it again (fig. 100). This cycle-standing, walking all the way down, walking back up, and standing free again-constitutes one single repetition of this exercise."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 2\n• intermediate standard:  2 sets of 4\n• Progression standard:  2 sets of 8"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/bridgeimags/bridge 8 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/bridgeimags/bridge 8 fig 2.png"
+
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/bridgeimags/bridge 8 fig 3.png"
+

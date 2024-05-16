@@ -1,0 +1,75 @@
+#:kivy 2.2.1
+
+<BridgesContentOne>:
+    name: 'Short Bridges'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('bridges')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(20)
+                spacing: dp(20)
+                adaptive_height: True
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Lie on your back, with your legs stretched out and your hands crossed on your stomach. Draw your feet in, bending the knees w1til your shins are nearly parallel to the ground and your feet your feet are flat on the floor. The feet should be shoulder width apart or a little less, depending upon your frame. Your heels will be around six to eight inches from your buttocks. This is the start position (fig.83). Press down through the feet, lifting the hips and back clear of the ground until only the shoulders and feet are supporting the bodyweight. At this point, your thighs, trunk and torso should form a straight line, with no sagging of the hips. This is the finish position (fig.84). Pause in the top position for a moment, before reversing the motion, lowering your body back to the start position. Repeat the exercise for your target repetitions, exhaling as you go up, inhaling on the way down."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 10\n• intermediate standard:  2 sets of 25\n• Progression standard:  3 sets of 50"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/bridgeimags/bridge 1 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/bridgeimags/bridge 1 fig 2.png"
+

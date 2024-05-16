@@ -1,0 +1,75 @@
+#:kivy 2.2.1
+
+<HandStandContentFour>:
+    name: 'Half Handstand Pushups'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "images/Exercise_BG2.png"
+
+        MDTopAppBar:
+            id: exercise
+            title: ""
+            left_action_items: [["arrow-left", lambda x: app.root.set_current('handstand')]]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            effect_cls: 'ScrollEffect'
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(20)
+                spacing: dp(20)
+                adaptive_height: True
+                row_default_height: dp(25)
+                textSize: app.root.get_screen('main').ids.bottom_nav.textSize
+                imageSize: app.root.get_screen('main').ids.bottom_nav.imageSize
+                    
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Performance"
+                
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "Approach a solid wall. Place your palms flat on the floor six to ten inches from the base of the wall, at about shoulder width apart. Keeping your arms as straight as possible, assume the position and kick up into a wall handstand (Level 3). You should now be in the classic wall handstand starting posture; your torso should be braced, your arms straight, and your body should curve backwards slightly to the point where your heels make a gentle contact with the wall. This is the start position for the half handstand pushup (fig.113). Now bend at the shoulders and elbows until the top of your head is halfway towards touching the ground. This is the finish position (fig.114). Pause briefly, before pushing firmly back up to the start position. The full range of motion for this technique will only be a bout six inches; at first, try not to overestimate and go too low. Breathe smoothly throughout the set."
+
+                MDLabel:
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    halign: 'center'
+                    font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
+                    underline: True
+                    text: "Training Goals"
+
+                MDLabel:
+                    size_hint_y: None
+                    size: self.texture_size
+                    font_size: self.parent.textSize
+                    font_name: "fonts/Eurostile.ttf"
+                    text: "• Beginner standard:  1 set of 5\n• intermediate standard:  2 set of 10\n• Progression standard:  2 set of 20"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/handimags/hand 4 fig 1.png"
+                
+                Image:
+                    size_hint_y: None
+                    height: self.parent.imageSize
+                    source: "images/handimags/hand 4 fig 2.png"
+
